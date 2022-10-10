@@ -8,9 +8,10 @@ Feel free to contact me
 ## How to run
 1. Install Python 3.7+
 2. Download this repo
-3. Run `python main.py`
-4. Input some values
-5. Done :)
+3. Run `pip install numpy gd.py svgpathtools`
+4. Run `python main.py`
+5. Input some values
+6. Done :)
 
 ## How it works
 It basically just uses gd.py to add objects/create a level with them and svgpathtools to actually make those objects.
