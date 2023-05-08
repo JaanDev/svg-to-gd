@@ -5,6 +5,14 @@ Port any SVG image to Geometry Dash
 Jaan#2897(mostly) and some code by camila314(converting svg to objects)
 Feel free to contact me
 
+## How to run
+1. Install Python 3.7+
+2. Download this repo
+3. Run `pip install numpy gd.py svgpathtools`
+4. Run `python main.py`
+5. Input some values
+6. Done :)
+
 ## How it works
 It basically just uses gd.py to add objects/create a level with them and svgpathtools to actually make those objects.
 
