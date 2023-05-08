@@ -11,11 +11,12 @@ def add_level(new_lvl: Editor):
     t = datetime.datetime.now()
 
     db = save.load()
-    levels = db.get_created_levels()
+    levels = db.load_my_levels()
 
     lvl = LevelAPI()
-    lvl.set_data(new_lvl.dump())
-    lvl.level_type = gd.LevelType.EDITOR
+    #lvl.set_data(new_lvl.dump())
+    lvldata = new_lvl.dump()
+    lvl.level_type = gd.api.LevelType.EDITOR
     lvl.name = NAME
 
     for l in levels:
@@ -24,7 +25,7 @@ def add_level(new_lvl: Editor):
 
     levels.insert(0, lvl)
 
-    db.dump_created_levels(levels)
+    db.dump_my_levels(levels)
     db.dump()
 
     print("Done in " + str(datetime.datetime.now() - t).split(".")[0] + ". Objects: " + str(len(new_lvl.objects)))
